@@ -29,22 +29,10 @@ module.exports = {
 		disableHostCheck: true,
 		proxy: {
 			'/api': {
-				// target: 'http://172.27.15.140:8045',
-				target: 'http://172.27.15.88',
-				// pathRewrite: {
-				// 	'^/api': ''
-				// }
-			},
-			'/wsapi': {
-				// target: 'ws://172.27.15.140:8045',
-				target: 'ws://172.27.15.88',
-				changeOrigin: true,
-				ws: true,
-				secure: false,
-				// logLevel: 'debug',
-			},
-			'/2020': {
-				target: 'http://172.27.15.88',
+				target: 'http://127.0.0.1:3000',
+				pathRewrite: {
+					'^/api': ''
+				}
 			}
 		}
 	},
